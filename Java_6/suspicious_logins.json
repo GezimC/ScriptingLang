@@ -1,0 +1,154 @@
+[
+    {
+        "timestamp": "2026-04-07T08:15:00",
+        "username": "alice",
+        "ip_address": "185.23.44.10",
+        "country": "Germany",
+        "status": "FAILED",
+        "device": "Windows 11"
+    },
+    {
+        "timestamp": "2026-04-07T08:16:00",
+        "username": "alice",
+        "ip_address": "185.23.44.10",
+        "country": "Germany",
+        "status": "FAILED",
+        "device": "Windows 11"
+    },
+    {
+        "timestamp": "2026-04-07T08:17:00",
+        "username": "alice",
+        "ip_address": "185.23.44.10",
+        "country": "Germany",
+        "status": "FAILED",
+        "device": "Windows 11"
+    },
+    {
+        "timestamp": "2026-04-07T08:18:00",
+        "username": "alice",
+        "ip_address": "185.23.44.10",
+        "country": "Germany",
+        "status": "SUCCESS",
+        "device": "Windows 11"
+    },
+    {
+        "timestamp": "2026-04-07T22:43:00",
+        "username": "bob",
+        "ip_address": "91.198.10.4",
+        "country": "Kosovo",
+        "status": "SUCCESS",
+        "device": "macOS"
+    },
+    {
+        "timestamp": "2026-04-07T22:47:00",
+        "username": "bob",
+        "ip_address": "91.198.10.4",
+        "country": "Kosovo",
+        "status": "FAILED",
+        "device": "macOS"
+    },
+    {
+        "timestamp": "2026-04-07T23:10:00",
+        "username": "carol",
+        "ip_address": "77.45.21.9",
+        "country": "France",
+        "status": "FAILED",
+        "device": "Linux"
+    },
+    {
+        "timestamp": "2026-04-07T23:11:00",
+        "username": "carol",
+        "ip_address": "77.45.21.9",
+        "country": "France",
+        "status": "FAILED",
+        "device": "Linux"
+    },
+    {
+        "timestamp": "2026-04-07T23:12:00",
+        "username": "carol",
+        "ip_address": "77.45.21.9",
+        "country": "France",
+        "status": "FAILED",
+        "device": "Linux"
+    },
+    {
+        "timestamp": "2026-04-07T23:13:00",
+        "username": "carol",
+        "ip_address": "77.45.21.9",
+        "country": "France",
+        "status": "FAILED",
+        "device": "Linux"
+    },
+    {
+        "timestamp": "2026-04-07T11:05:00",
+        "username": "david",
+        "ip_address": "201.8.19.7",
+        "country": "Brazil",
+        "status": "SUCCESS",
+        "device": "Android"
+    },
+    {
+        "timestamp": "2026-04-07T11:07:00",
+        "username": "david",
+        "ip_address": "201.8.19.7",
+        "country": "Brazil",
+        "status": "FAILED",
+        "device": "Android"
+    },
+    {
+        "timestamp": "2026-04-07T02:30:00",
+        "username": "emma",
+        "ip_address": "103.44.55.2",
+        "country": "Singapore",
+        "status": "SUCCESS",
+        "device": "iPhone"
+    },
+    {
+        "timestamp": "2026-04-07T02:35:00",
+        "username": "emma",
+        "ip_address": "103.44.55.2",
+        "country": "Singapore",
+        "status": "FAILED",
+        "device": "iPhone"
+    },
+    {
+        "timestamp": "2026-04-07T14:00:00",
+        "username": "frank",
+        "ip_address": "5.188.7.21",
+        "country": "Russia",
+        "status": "FAILED",
+        "device": "Unknown"
+    },
+    {
+        "timestamp": "2026-04-07T14:01:00",
+        "username": "frank",
+        "ip_address": "5.188.7.21",
+        "country": "Russia",
+        "status": "FAILED",
+        "device": "Unknown"
+    },
+    {
+        "timestamp": "2026-04-07T14:02:00",
+        "username": "frank",
+        "ip_address": "5.188.7.21",
+        "country": "Russia",
+        "status": "FAILED",
+        "device": "Unknown"
+    },
+    {
+        "timestamp": "2026-04-07T09:40:00",
+        "username": "grace",
+        "ip_address": "41.22.18.5",
+        "country": "Albania",
+        "status": "SUCCESS",
+        "device": "Windows 10"
+    },
+    {
+        "timestamp": "2026-04-07T09:42:00",
+        "username": "grace",
+        "ip_address": "41.22.18.5",
+        "country": "Kosovo",
+        "status": "SUCCESS",
+        "device": "Windows 10"
+    }
+]

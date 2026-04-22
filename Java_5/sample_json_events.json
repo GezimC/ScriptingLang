@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2026-04-08T08:10:00",
+    "username": "alice",
+    "status": "FAILED",
+    "ip": "10.0.0.5"
+  },
+  {
+    "timestamp": "2026-04-08T08:11:00",
+    "username": "alice",
+    "status": "FAILED",
+    "ip": "10.0.0.5"
+  },
+  {
+    "timestamp": "2026-04-08T08:12:00",
+    "username": "bob",
+    "status": "SUCCESS",
+    "ip": "10.0.0.6"
+  },
+  {
+    "timestamp": "2026-04-08T08:13:00",
+    "username": "carol",
+    "status": "FAILED",
+    "ip": "10.0.0.7"
+  }
+]

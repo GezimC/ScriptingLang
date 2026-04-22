@@ -1,0 +1,49 @@
+1. Create a list of numbers and print each element using a for loop.
+
+2. Given a list of numbers, calculate the sum of all elements using a loop.
+
+3. Given a list of numbers, count how many numbers are even.
+
+4. Given a list of numbers, find the largest number without using max().
+
+5. Given a list of numbers, replace every negative number with 0.
+
+6. Given a list of boolean values, count how many values are True.
+
+7. Given a list of numbers, create a new list that contains only numbers greater than 10.
+
+8. Given a list of words, count how many words have more than 5 characters.
+
+9. Given a list of numbers, check if a specific number exists in the list.
+
+10. Given a list of numbers, count how many numbers are positive, negative, and zero.
+
+11. Given a list of numbers, create a new list that removes duplicate values.
+
+12. Given a list of numbers, reverse the list using a loop (do not use reverse() or slicing).
+
+13. Given a list of numbers, check if all numbers are positive.
+
+14. Given a list that may contain None values, replace every None with 0.
+
+15. Given a list that contains integers and string numbers, convert all string numbers to integers.
+
+
+-------------------------------------------------------------------------
+
+16. Create a matrix (3,3), find max value and its position
+
+17. Creating a list of squares from another list (long and short way )
+
+18.Reverse a list using while
+
+19. Give access to user with password "admin123", use while to check
+
+
+20. List comprehension - find just local ips from ips = ["192.168.1.1", "10.0.0.1", "192.168.1.45"]
+
+21. Represent a Network Packet packet = ("192.168.1.10", "8.8.8.8", 53)
+
+
+
+
