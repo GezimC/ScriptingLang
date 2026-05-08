@@ -2,6 +2,7 @@ import json
 import argparse
 import csv
 import datetime as d
+import time as t
 
 def load_dataset(file):
     with open(file) as f:
@@ -115,21 +116,18 @@ def detect_bruteforce(events, threshold=5, window_seconds=60):
         found_bruteforce = False
 
         for index in range(len(timestamps) - threshold + 1):
-            start = d.date.strptime(timestamps[index], "%Y-%m-%dT%H:%M:%S")
-            end = d.date.strptime(timestamps[index + threshold - 1], "%Y-%m-%dT%H:%M:%S")
+            start = d.datetime.strptime(timestamps[index], "%Y-%m-%dT%H:%M:%S")
+            end = d.datetime.strptime(timestamps[index + threshold - 1], "%Y-%m-%dT%H:%M:%S")
 
             diff = ((end - start).total_seconds())
 
-            if diff < window_seconds:
+            if diff <= window_seconds:
                 found_bruteforce = True
                 print(f"{user} --> Potential brute force")
                 break
 
         if found_bruteforce:
             continue
-
-
-
 
 
 
@@ -144,6 +142,7 @@ def main():
     parser.add_argument("--ip", action="store_true")
     parser.add_argument("--showUser", action="store_true")
     parser.add_argument("--csv", action="store_true")
+    parser.add_argument("--bruteforce", action="store_true")
 
 
     args = parser.parse_args()
@@ -172,6 +171,15 @@ def main():
 
     if args.csv:
         export_to_csv(filtered, args.file+"_filtered")
+
+    if args.bruteforce:
+        while True:
+            print("Monitoring bruteforce")
+
+            new_events = load_dataset(args.file)
+            detect_bruteforce(new_events, threshold=4, window_seconds=60)
+
+            t.sleep(15)
 
 if __name__ == '__main__':
     main()
