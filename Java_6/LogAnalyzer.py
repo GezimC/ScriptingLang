@@ -4,6 +4,7 @@ import csv
 import datetime as d
 import time as t
 
+
 def load_dataset(file):
     with open(file) as f:
         return json.load(f)
@@ -124,10 +125,35 @@ def detect_bruteforce(events, threshold=5, window_seconds=60):
             if diff <= window_seconds:
                 found_bruteforce = True
                 print(f"{user} --> Potential brute force")
+
+                alert = create_alert(alert_type="bruteforce",
+                             severity=3,
+                             message="Bruteforce alert",
+                             event=user)
+
+                alerts = []
+                alerts.append(alert)
+
+                save_alerts(alerts)
+
                 break
 
         if found_bruteforce:
             continue
+
+def create_alert(alert_type, severity, message, event=None):
+    alert = {
+        "alert_type": alert_type,
+        "severity": severity,
+        "message": message,
+        "event": event
+    }
+
+    return alert
+
+def save_alerts(alerts):
+    with open("alerts.json", "a") as f:
+        json.dump(alerts, f, indent=3)
 
 
 
@@ -143,6 +169,7 @@ def main():
     parser.add_argument("--showUser", action="store_true")
     parser.add_argument("--csv", action="store_true")
     parser.add_argument("--bruteforce", action="store_true")
+    parser.add_argument("--monitoring", action="store_true")
 
 
     args = parser.parse_args()
@@ -154,6 +181,9 @@ def main():
         print("File not found")
     else:
         print("Loaded dataset")
+
+    # previous_count = len(events)  # 100
+    previous_count = 0
 
 
     filtered = filter_logs(events, args.country, args.username, args.status)
@@ -180,6 +210,29 @@ def main():
             detect_bruteforce(new_events, threshold=4, window_seconds=60)
 
             t.sleep(15)
+
+    if args.monitoring:
+        while True:
+            print("Monitoring.... NEW CASE .... BRUTEFORCE")
+            new_events = load_dataset(args.file)
+
+            actual_count = len(new_events)
+
+            if actual_count > previous_count:
+                new_data = new_events[previous_count:actual_count]
+                print("Number of new events is", len(new_data))
+
+                show_events(new_data)
+
+                print("Brutefore alert ...")
+                detect_bruteforce(new_data, threshold=5, window_seconds=60)
+            else:
+                print("No new events")
+
+            previous_count = actual_count
+            t.sleep(15)
+
+
 
 if __name__ == '__main__':
     main()
